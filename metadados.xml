@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadados>
+    <geral>
+        <projeto>Calculadora de Estruturas de Eucalipto - Sistema por Blocos</projeto>
+        <versao>1.5</versao>
+        <data>2025-05-22</data>
+    </geral>
+    <estrutura>
+        <altura_pilar>3000</altura_pilar>
+        <bitola_tora>12/14</bitola_tora>
+        <comprimento_tora_pilar>3</comprimento_tora_pilar>
+        <comprimento_tora_longarina>5</comprimento_tora_longarina>
+        <peso_linear_tora>12</peso_linear_tora>
+    </estrutura>
+    <modulacao>
+        <lado_unico>
+            <formula_pilares>2 * ceil(vagas / 2) + 2</formula_pilares>
+            <formula_longarinas_longitudinais>
+                Para cada bloco: ceil((vagas * profundidade_vaga) / 5) * 2
+            </formula_longarinas_longitudinais>
+            <formula_longarinas_transversais>
+                pilares - 1
+            </formula_longarinas_transversais>
+        </lado_unico>
+        <frente_a_frente>
+            <formula_pilares>(vagas / 2) + 1</formula_pilares>
+            <formula_longarinas_transversais>
+                pilares - 1
+            </formula_longarinas_transversais>
+            <formula_longarinas_longitudinais>
+                // Definir conforme projeto (atualmente não priorizado)
+            </formula_longarinas_longitudinais>
+        </frente_a_frente>
+    </modulacao>
+    <ferragens>
+        <mao_francesa>
+            <peso_kg>1</peso_kg>
+            <custo_kg>30</custo_kg>
+        </mao_francesa>
+        <ilhós>
+            <distancia_mm>250</distancia_mm>
+        </ilhós>
+    </ferragens>
+    <processos>
+        <usinagem>2.00</usinagem>
+        <lixamento>1.50</lixamento>
+        <verniz_osmocolor>3.00</verniz_osmocolor>
+        <piche_queimado>true</piche_queimado>
+    </processos>
+    <logistica>
+        <base_por_kg>2.0</base_por_kg>
+        <ajustes_por_complexidade>true</ajustes_por_complexidade>
+    </logistica>
+    <tela>
+        <custo_m2>20</custo_m2>
+    </tela>
+    <calculo_por_blocos>
+        <itens>
+            <tora_pilar>true</tora_pilar>
+            <tora_longarina>true</tora_longarina>
+            <peso_estimado>true</peso_estimado>
+            <preparacao_tora>true</preparacao_tora>
+            <area_total_tela>true</area_total_tela>
+            <kits_ilhos>true</kits_ilhos>
+            <qtd_mao_francesa>true</qtd_mao_francesa>
+            <peso_mao_francesa>true</peso_mao_francesa>
+            <logistica>true</logistica>
+        </itens>
+        <totalizadores>
+            <total_por_bloco>true</total_por_bloco>
+            <total_geral>true</total_geral>
+        </totalizadores>
+    </calculo_por_blocos>
+</metadados>
+
+<metadados>
+  <versao>2.0</versao>
+  <data>2025-05-23</data>
+  <descricao>
+    Lógica dos modos "lado a lado" e "frente a frente" aprovada e funcional.
+    Inputs padronizados. Interface visual aguardando refinamento.
+    Backups mantidos para versionamento.
+  </descricao>
+  <!-- parâmetros e regras já existentes seguem sem alteração -->
+</metadados>
+
+<metadados>
+  <versao>2.0</versao>
+  <data>2025-05-23</data>
+  <descricao>
+    Sistema de atualização e checagem robusto. Versões antigas preservadas, apenas agregando novidades.
+    Constante de versão usada como referência. Backups presentes para controle e rollback.
+    Lógica robusta; interface aguardando ajustes finais.
+  </descricao>
+  <!-- ...demais parâmetros do seu XML... -->
+</metadados>

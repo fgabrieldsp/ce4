@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Estruturas de Eucalipto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Estruturas de Eucalipto - Sistema por Blocos</h1>
+
+        <!-- Título central da seção de parâmetros -->
+        <h2 class="param-titulo-central">Parâmetros do Projeto</h2>
+
+        <!-- Área de parâmetros em grid agrupado -->
+        <div class="parametros-grid">
+
+            <!-- Grupo: Pilar -->
+            <div class="param-group">
+                <span class="param-title">Pilar</span>
+                <div class="param-row">
+                    <label for="bitolaPilar">Bitola:</label>
+                    <select id="bitolaPilar" onchange="atualizarPesoPilar()" class="param-input">
+                        <option value="12/14" data-peso="12">12/14 cm</option>
+                        <option value="10/12" data-peso="9">10/12 cm</option>
+                        <option value="14/16" data-peso="15">14/16 cm</option>
+                    </select>
+                </div>
+                <div class="param-row">
+                    <label for="pesoLinearPilar">Peso Linear (kg/m):</label>
+                    <input type="number" step="0.01" id="pesoLinearPilar" value="12" class="param-input">
+                </div>
+                <div class="param-row">
+                    <label for="precoToraPilar">Preço Tora (R$):</label>
+                    <input type="number" step="0.01" id="precoToraPilar" value="50" class="param-input">
+                </div>
+            </div>
+
+            <!-- Grupo: Longarina -->
+            <div class="param-group">
+                <span class="param-title">Longarina</span>
+                <div class="param-row">
+                    <label for="bitolaLongarina">Bitola:</label>
+                    <select id="bitolaLongarina" onchange="atualizarPesoLongarina()" class="param-input">
+                        <option value="12/14" data-peso="12">12/14 cm</option>
+                        <option value="10/12" data-peso="9">10/12 cm</option>
+                        <option value="14/16" data-peso="15">14/16 cm</option>
+                    </select>
+                </div>
+                <div class="param-row">
+                    <label for="pesoLinearLongarina">Peso Linear (kg/m):</label>
+                    <input type="number" step="0.01" id="pesoLinearLongarina" value="12" class="param-input">
+                </div>
+                <div class="param-row">
+                    <label for="precoToraLongarina">Preço Tora (R$):</label>
+                    <input type="number" step="0.01" id="precoToraLongarina" value="50" class="param-input">
+                </div>
+            </div>
+
+            <!-- Grupo: Vaga e Tela -->
+            <div class="param-group">
+                <span class="param-title">Vaga e Tela</span>
+                <div class="param-row">
+                    <label for="larguraVaga">Largura (m):</label>
+                    <input type="number" step="0.01" id="larguraVaga" value="2.4" class="param-input">
+                </div>
+                <div class="param-row">
+                    <label for="profundidadeVaga">Profundidade (m):</label>
+                    <input type="number" step="0.01" id="profundidadeVaga" value="4.8" class="param-input">
+                </div>
+                <div class="param-row">
+                    <label for="custoTela">Custo Tela (R$/m²):</label>
+                    <input type="number" step="0.01" id="custoTela" value="20" class="param-input">
+                </div>
+            </div>
+
+            <!-- Grupo: Custos e Extras -->
+            <div class="param-group">
+                <span class="param-title">Custos e Extras</span>
+                <div class="param-row">
+                    <label for="custoUsinagem">Usinagem (R$/m):</label>
+                    <input type="number" step="0.01" id="custoUsinagem" value="2" class="param-input">
+                </div>
+                <div class="param-row">
+                    <label for="custoLixamento">Lixamento (R$/m):</label>
+                    <input type="number" step="0.01" id="custoLixamento" value="1.5" class="param-input">
+                </div>
+                <div class="param-row">
+                    <label for="custoVerniz">Verniz (R$/m):</label>
+                    <input type="number" step="0.01" id="custoVerniz" value="3" class="param-input">
+                </div>
+                <div class="param-row">
+                    <label for="consumoVerniz">Consumo Verniz (L/m²):</label>
+                    <input type="number" step="0.01" id="consumoVerniz" value="0.1" class="param-input">
+                </div>
+                <div class="param-row">
+                    <label for="custoMaoFrancesa">Mão Francesa (R$/kg):</label>
+                    <input type="number" step="0.01" id="custoMaoFrancesa" value="30" class="param-input">
+                </div>
+                <div class="param-row">
+                    <label for="pesoMaoFrancesa">Peso Mão Francesa (kg):</label>
+                    <input type="number" step="0.01" id="pesoMaoFrancesa" value="1" class="param-input">
+                </div>
+                <div class="param-row">
+                    <label for="custoLogistica">Logística (R$/kg):</label>
+                    <input type="number" step="0.01" id="custoLogistica" value="2" class="param-input">
+                </div>
+                <div class="param-row">
+                    <label for="distanciaIlhos">Distância Ilhós (m):</label>
+                    <input type="number" step="0.01" id="distanciaIlhos" value="0.25" class="param-input">
+                </div>
+                <div class="param-row">
+                    <label for="consumoPiche">Consumo de Piche (L/pilar):</label>
+                    <input type="number" step="0.01" id="consumoPiche" value="0.5" class="param-input">
+                </div>
+            </div>
+        </div>
+
+        <!-- Bloco de adicionar bloco -->
+        <div class="bloco-form">
+            <h2>Adicionar Bloco</h2>
+            <label>Vagas: <input type="number" id="vagas" min="1" class="param-input"></label>
+            <label>Modulação:
+                <select id="modulacao" class="param-input">
+                    <option value="lado">Lado a Lado</option>
+                    <option value="frente">Frente a Frente</option>
+                </select>
+            </label>
+            <button onclick="adicionarBloco()" class="bloco-btn">Adicionar Bloco</button>
+        </div>
+
+        <!-- Lista de Blocos -->
+        <div class="blocos-lista">
+            <h2>Blocos Adicionados</h2>
+            <ul id="lista-blocos"></ul>
+        </div>
+
+        <!-- Resultado -->
+        <div class="resultado">
+            <h2>Resultado</h2>
+            <pre id="resultado"></pre>
+        </div>
+
+        <button onclick="calcular()" class="calcular-btn">Calcular</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
