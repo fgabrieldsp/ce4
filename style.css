@@ -58,27 +58,37 @@ h2 {
 /* NOVA ÁREA DE PARÂMETROS EM GRID */
 .parametros-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px 32px;
-  margin-bottom: 20px;
-  padding: 18px 10px;
-  background: var(--card-bg);
-  border-radius: 16px;
-  box-shadow: var(--card-shadow);
-  border: 1px solid var(--border);
-  transition: box-shadow 0.25s;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
 }
 
 .param-group {
-  background: #fff7;
-  border-radius: 10px;
-  padding: 12px 12px 14px 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  padding: 20px 18px 16px 18px;
   margin-bottom: 0;
-  box-shadow: 0 1px 7px 0 rgba(35,70,89,0.05);
-  border: 1px solid #e6ecef;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+}
+
+/* Agrupamento visual: Pilar + Longarina na primeira coluna, Vaga e Tela + Custos e Extras na segunda */
+.parametros-grid .param-group:nth-child(1),
+.parametros-grid .param-group:nth-child(2) {
+  grid-row: 1;
+}
+.parametros-grid .param-group:nth-child(3),
+.parametros-grid .param-group:nth-child(4) {
+  grid-row: 2;
+}
+
+@media (max-width: 900px) {
+  .parametros-grid {
+    grid-template-columns: 1fr;
+  }
+  .param-group {
+    margin-bottom: 18px;
+  }
 }
 
 .param-title {
