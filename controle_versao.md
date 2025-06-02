@@ -40,3 +40,10 @@
 - Lógica consolidada para ambos os modos de modulação (“lado a lado” e “frente a frente”), blocos dinâmicos e controles de edição.
 - Interface visual/UX aguardando refinamento na próxima etapa.
 - Todos os backups e marcos preservados no pacote para rastreabilidade.
+
+# Controle de Versão - CE4
+
+## v2.0 - 2025-06-02
+- Projeto sincronizado e versionado no GitHub (primeira subida do pacote completo para o repositório remoto).
+- Todos os arquivos essenciais presentes e alinhados.
+- Pronto para controle de versão colaborativo.
