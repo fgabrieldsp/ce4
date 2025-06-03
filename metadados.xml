@@ -10,7 +10,13 @@
         <bitola_tora>12/14</bitola_tora>
         <comprimento_tora_pilar>3</comprimento_tora_pilar>
         <comprimento_tora_longarina>5</comprimento_tora_longarina>
-        <peso_linear_tora>12</peso_linear_tora>
+        <peso_linear_tora>13.28</peso_linear_tora> <!-- 66,40 kg / 5m = 13,28 kg/m -->
+        <peso_tora_5m>66.40</peso_tora_5m>
+        <preco_tora_5m_min>77.00</preco_tora_5m_min>
+        <preco_tora_5m_max>106.00</preco_tora_5m_max>
+        <preco_tora_5m_min_frete>111.53</preco_tora_5m_min_frete>
+        <preco_tora_5m_max_frete>177.76</preco_tora_5m_max_frete>
+        <imposto_nota>14</imposto_nota> <!-- Imposto da nota fiscal (%) -->
     </estrutura>
     <modulacao>
         <lado_unico>
